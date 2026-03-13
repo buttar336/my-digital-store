@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Vault | Premium Assets & Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .category-pill.active { background-color: #4f46e5; color: white; border-color: #4f46e5; }
+        .product-card:hover { transform: translateY(-8px); }
+    </style>
+</head>
+<body class="bg-[#fcfcfd] text-slate-900">
+
+    <div class="bg-indigo-600 text-white text-center py-2.5 text-xs font-bold uppercase tracking-widest">
+        ⚡️ Limited Time: Use code 20OFF at checkout for 20% off all assets
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter text-indigo-600">DIGI<span class="text-slate-900">VAULT.</span></div>
+            
+            <div class="hidden md:flex items-center space-x-10 font-semibold text-sm text-slate-600">
+                <a href="#products" class="hover:text-indigo-600 transition">Marketplace</a>
+                <a href="#about" class="hover:text-indigo-600 transition">Our Story</a>
+                <a href="#newsletter" class="hover:text-indigo-600 transition">Freebies</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="mailto:support@yourdomain.com" class="text-sm font-bold text-slate-500 hover:text-indigo-600">Help</a>
+                <button class="bg-slate-900 text-white px-7 py-3 rounded-2xl font-bold hover:bg-indigo-600 transition shadow-xl shadow-indigo-100">
+                    My Account
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-24 pb-16 px-6 text-center">
+        <div class="inline-block px-4 py-1.5 mb-6 text-indigo-600 bg-indigo-50 rounded-full text-xs font-bold uppercase tracking-widest">
+            New for 2026: AI-Ready Templates
+        </div>
+        <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter text-slate-900">
+            Assets for the <br><span class="text-indigo-600">Modern Creator.</span>
+        </h1>
+        <p class="text-slate-500 text-xl max-w-2xl mx-auto leading-relaxed mb-12">
+            Professional UI kits, production-ready code, and high-impact eBooks delivered to your inbox in seconds.
+        </p>
+        
+        <div class="max-w-2xl mx-auto relative group">
+            <input type="text" placeholder="Search for 'Next.js' or 'Trading Guide'..." class="w-full pl-14 pr-6 py-6 rounded-3xl border-2 border-slate-100 shadow-sm group-hover:border-indigo-200 focus:border-indigo-500 outline-none transition-all text-lg">
+            <i class="fa-solid fa-magnifying-glass absolute left-6 top-7 text-slate-400"></i>
+        </div>
+    </header>
+
+    <section id="products" class="max-w-7xl mx-auto px-6 mb-16">
+        <div class="flex flex-wrap gap-4 justify-center">
+            <button class="category-pill active border-2 border-slate-100 px-10 py-3 rounded-2xl font-bold transition" onclick="filterProducts('all')">All Library</button>
+            <button class="category-pill border-2 border-slate-100 px-10 py-3 rounded-2xl font-bold transition" onclick="filterProducts('design')">Design</button>
+            <button class="category-pill border-2 border-slate-100 px-10 py-3 rounded-2xl font-bold transition" onclick="filterProducts('code')">Software</button>
+            <button class="category-pill border-2 border-slate-100 px-10 py-3 rounded-2xl font-bold transition" onclick="filterProducts('ebooks')">Knowledge</button>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12" id="product-grid">
+            </div>
+    </main>
+
+    <section id="about" class="max-w-7xl mx-auto px-6 py-32 border-t border-slate-100">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="aspect-square bg-slate-100 rounded-[4rem] overflow-hidden rotate-3 hover:rotate-0 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop" alt="Workspace" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                </div>
+                <div class="absolute -bottom-10 -left-10 bg-indigo-600 p-8 rounded-[2rem] text-white shadow-2xl">
+                    <p class="text-5xl font-black">24/7</p>
+                    <p class="text-indigo-100 text-sm font-bold uppercase tracking-widest mt-2">Instant Delivery</p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-5xl font-extrabold mb-8 tracking-tight">Built by creators, <br><span class="text-indigo-600">for creators.</span></h2>
+                <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                    We started DigiVault because we were tired of "junk" digital products. Every asset in our store is vetted for performance, security, and usability.
+                </p>
+                <div class="grid grid-cols-2 gap-8 mb-10">
+                    <div>
+                        <h4 class="font-black text-indigo-600 text-2xl">100%</h4>
+                        <p class="text-slate-500 text-sm font-bold">Secure Stripe Payments</p>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-indigo-600 text-2xl">FREE</h4>
+                        <p class="text-slate-500 text-sm font-bold">Updates for Life</p>
+                    </div>
+                </div>
+                <a href="#products" class="inline-block bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-indigo-600 transition shadow-lg">Browse The Catalog</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="max-w-7xl mx-auto px-6 mb-32">
+        <div class="bg-indigo-600 rounded-[4rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Get the Creator Weekly.</h2>
+                <p class="text-indigo-100 mb-10 text-lg max-w-xl mx-auto">Join 15,000+ creators and get one free digital asset every Tuesday directly in your inbox.</p>
+                <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" placeholder="Email Address" class="flex-1 px-8 py-5 rounded-3xl text-slate-900 outline-none focus:ring-4 focus:ring-white/20 text-lg" required>
+                    <button type="submit" class="bg-slate-900 text-white px-10 py-5 rounded-3xl font-black hover:bg-slate-800 transition shadow-2xl">Join Now</button>
+                </form>
+            </div>
+            <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-slate-100 py-20 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div>
+                <div class="text-3xl font-black text-indigo-600 mb-2">DIGIVAULT.</div>
+                <p class="text-slate-400 text-sm">Elevating the digital economy since 2026.</p>
+            </div>
+            <div class="flex gap-10 text-sm font-bold text-slate-600">
+                <a href="#" onclick="alert('Digital Goods Terms: All Sales are Final.')" class="hover:text-indigo-600">Terms</a>
+                <a href="#" class="hover:text-indigo-600">Privacy</a>
+                <a href="#" class="hover:text-indigo-600">License</a>
+                <a href="mailto:support@yourstore.com" class="hover:text-indigo-600">Contact</a>
+            </div>
+            <div class="flex gap-6 text-2xl text-slate-300">
+                <a href="#" class="hover:text-indigo-600 transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-indigo-600 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-indigo-600 transition"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // REPLACE THESE with your actual Stripe Payment Links
+        const products = [
+            { 
+                id: 1, 
+                title: "Ultra SaaS UI Kit", 
+                category: "design", 
+                price: 59, 
+                icon: "💎", 
+                desc: "120+ High-end Figma components.",
+                stripeLink: "https://buy.stripe.com/demo1" 
+            },
+            { 
+                id: 2, 
+                title: "Stock Bot v2.0", 
+                category: "code", 
+                price: 149, 
+                icon: "📈", 
+                desc: "Node.js trading automation script.",
+                stripeLink: "https://buy.stripe.com/demo2"
+            },
+            { 
+                id: 3, 
+                title: "Passive Income Blueprint", 
+                category: "ebooks", 
+                price: 29, 
+                icon: "📖", 
+                desc: "The definitive guide to digital sales.",
+                stripeLink: "https://buy.stripe.com/demo3"
+            }
+        ];
+
+        function renderProducts(items) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = items.map(p => `
+                <div class="product-card bg-white rounded-[3rem] border-2 border-slate-50 p-8 shadow-sm transition-all duration-500 group">
+                    <div class="aspect-square bg-slate-50 rounded-[2.5rem] flex items-center justify-center text-7xl mb-8 group-hover:bg-indigo-50 transition duration-500">
+                        ${p.icon}
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-[11px] font-black uppercase tracking-[0.2em] text-indigo-600 bg-indigo-50 px-4 py-1.5 rounded-full">${p.category}</span>
+                        <span class="font-black text-3xl text-slate-900 font-mono">$${p.price}</span>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-3">${p.title}</h3>
+                    <p class="text-slate-500 text-base mb-10 leading-relaxed">${p.desc}</p>
+                    
+                    <a href="${p.stripeLink}" target="_blank" class="block w-full text-center bg-slate-900 text-white py-5 rounded-2xl font-black text-lg hover:bg-indigo-600 shadow-2xl shadow-slate-100 transition-all active:scale-95">
+                        Purchase Asset
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        function filterProducts(cat) {
+            document.querySelectorAll('.category-pill').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(cat)) btn.classList.add('active');
+            });
+            const filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
+            renderProducts(filtered);
+        }
+
+        // Initialize Store
+        renderProducts(products);
+    </script>
+</body>
+</html>
